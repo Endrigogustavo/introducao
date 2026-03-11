@@ -18,6 +18,14 @@ public class ClienteControllerAdapter {
                 request.telefone());
     }
 
+    public static Cliente castRequestWithId(String id, ClientRequest request) {
+        return new Cliente(
+                id,
+                request.nome(),
+                request.endereco(),
+                request.telefone());
+    }
+
     public static ClienteResponse castResponse(Cliente cliente) {
         return new ClienteResponse(
                 cliente.id(),
